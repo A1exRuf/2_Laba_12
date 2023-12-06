@@ -10,7 +10,7 @@ private:
 	bool protection;
 public:
 	Flash();
-	Flash(string shellType, string shellColor, bool protection);
+	Flash(string manufacturer, int storageSize, int readSpeed, int writeSpeed, string shellType, string shellColor, bool protection);
 	~Flash();
 
 	void setShellType(string shellType);
@@ -21,5 +21,7 @@ public:
 
 	void setProtection(bool protection);
 	bool getProtection();
+	void inputInfo();
+	void outputInfo();
 };
 

@@ -7,7 +7,8 @@ Flash::Flash() : Storage()
     this->protection = false;
 }
 
-Flash::Flash(string shellType, string shellColor, bool protection)
+Flash::Flash(string manufacturer, int storageSize, int readSpeed, int writeSpeed, string shellType, string shellColor, bool protection)
+    : Storage(manufacturer, storageSize, readSpeed, writeSpeed)
 {
     this->shellType = shellType;
     this->shellColor = shellColor;
@@ -46,4 +47,21 @@ void Flash::setProtection(bool protection)
 bool Flash::getProtection()
 {
     return this->protection;
+}
+
+void Flash::inputInfo() {
+    Storage::inputInfo();
+    cout << "Enter Shell Type: ";
+    cin >> shellType;
+    cout << "Enter Shell Color: ";
+    cin >> shellColor;
+    cout << "Enter Protection (1 for Yes, 0 for No): ";
+    cin >> protection;
+}
+
+void Flash::outputInfo() {
+    Storage::outputInfo();
+    cout << "Shell Type: " << shellType << endl;
+    cout << "Shell Color: " << shellColor << endl;
+    cout << "Protection: " << (protection ? "Yes" : "No") << endl;
 }

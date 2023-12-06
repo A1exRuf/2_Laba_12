@@ -6,7 +6,8 @@ HDD::HDD() : Storage()
 	this->interface = "unknown";
 }
 
-HDD::HDD(int rpm, string interface)
+HDD::HDD(string manufacturer, int storageSize, int readSpeed, int writeSpeed, int rpm, string interface)
+	: Storage(manufacturer, storageSize, readSpeed, writeSpeed)
 {
 	this->rpm = rpm;
 	this->interface = interface; 
@@ -34,4 +35,18 @@ void HDD::setInterface(string interface)
 string HDD::getInterface()
 {
 	return this->interface;
+}
+
+void HDD::inputInfo() {
+	Storage::inputInfo();
+	cout << "Enter RPM: ";
+	cin >> rpm;
+	cout << "Enter Interface: ";
+	cin >> interface;
+}
+
+void HDD::outputInfo() {
+	Storage::outputInfo();
+	cout << "RPM: " << rpm << endl;
+	cout << "Interface: " << interface << endl;
 }

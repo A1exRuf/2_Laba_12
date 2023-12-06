@@ -59,3 +59,23 @@ int Storage::getWriteSpeed()
 {
     return this->writeSpeed;
 }
+
+void Storage::inputInfo()
+{
+    cout << "Enter manufacturer: ";
+    cin >> manufacturer;
+    cout << "Enter storage size: ";
+    cin >> storageSize;
+    cout << "Enter read speed: ";
+    cin >> readSpeed;
+    cout << "Enter write speed: ";
+    cin >> writeSpeed;
+}
+
+void Storage::outputInfo()
+{
+    cout << "Manufacturer: " << manufacturer;
+    cout << "Storage size: " << storageSize;
+    cout << "Read speed: " << readSpeed;
+    cout << "Write speed: " << writeSpeed;
+}

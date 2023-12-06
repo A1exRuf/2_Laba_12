@@ -26,5 +26,8 @@ public:
 
 	void setWritedSpeed(int writeSpeed);
 	int getWriteSpeed();
+
+	void inputInfo();
+	void outputInfo();
 };
 

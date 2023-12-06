@@ -3,35 +3,21 @@
 
 int main()
 {
-    HDD hdd;
-    hdd.setManufacturer("Western Digital");
-    hdd.setStorageSize(2048);
-    hdd.setReadSpeed(160);
-    hdd.setWritedSpeed(120);
+    HDD hdd("Western Digital", 2048, 256, 224, 7200, "USB 3.0");
 
-    hdd.setRpm(7200);
-    hdd.setInterface("USB 3");
+    hdd.outputInfo();
 
-    cout << hdd.getManufacturer() << endl;
-    cout << hdd.getStorageSize() << endl;
-    cout << hdd.getReadSpeed() << endl;
-    cout << hdd.getWriteSpeed() << endl;
-    cout << hdd.getRpm() << endl;
-    cout << hdd.getInterface() << endl;
+    Flash flash("Kingstone", 512, 1024, 840, "plastic", "black", true);
 
-    Flash flash("SD", "Black", true);
+    flash.outputInfo();
 
-    flash.setManufacturer("Kingstone");
-    flash.setStorageSize(512);
-    flash.setReadSpeed(2400);
-    flash.setWritedSpeed(1800);
+    HDD hdd2;
 
-    cout << flash.getManufacturer() << endl;
-    cout << flash.getStorageSize() << endl;
-    cout << flash.getReadSpeed() << endl;
-    cout << flash.getWriteSpeed() << endl;
-    cout << flash.getShellType() << endl;
-    cout << flash.getShellColor() << endl;
-    cout << flash.getProtection() << endl;
+    hdd2.inputInfo();
+    hdd2.outputInfo();
 
+    Flash flash2;
+
+    flash2.inputInfo();
+    flash2.outputInfo();
 }

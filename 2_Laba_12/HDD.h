@@ -10,7 +10,7 @@ private:
 
 public:
 	HDD();
-	HDD(int rpm, string interface);
+	HDD(string manufacturer, int storageSize, int readSpeed, int writeSpeed, int rpm, string interface);
 	~HDD();
 
 	void setRpm(int rpm);
@@ -18,4 +18,6 @@ public:
 
 	void setInterface(string interface);
 	string getInterface();
+	void inputInfo();
+	void outputInfo();
 };

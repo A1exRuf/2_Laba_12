@@ -21,7 +21,8 @@ public:
 
 	void setProtection(bool protection);
 	bool getProtection();
-	void inputInfo();
-	void outputInfo();
-};
 
+	void inputInfo() override;
+	void outputInfo() override;
+	void ejectDevice() override;
+};

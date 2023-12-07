@@ -65,3 +65,8 @@ void Flash::outputInfo() {
     cout << "Shell Color: " << shellColor << endl;
     cout << "Protection: " << (protection ? "Yes" : "No") << endl;
 }
+
+void Flash::ejectDevice()
+{
+    cout << "You can eject your Flash drive from USB port \n";
+}

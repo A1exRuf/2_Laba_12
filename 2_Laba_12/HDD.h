@@ -7,7 +7,6 @@ class HDD : public Storage
 private:
 	int rpm;
 	string interface;
-
 public:
 	HDD();
 	HDD(string manufacturer, int storageSize, int readSpeed, int writeSpeed, int rpm, string interface);
@@ -18,6 +17,7 @@ public:
 
 	void setInterface(string interface);
 	string getInterface();
-	void inputInfo();
-	void outputInfo();
+	void inputInfo() override;
+	void outputInfo() override;
+	void ejectDevice() override;
 };

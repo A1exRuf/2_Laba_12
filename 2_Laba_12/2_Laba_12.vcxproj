@@ -130,11 +130,13 @@
     <ClCompile Include="2_Laba_12.cpp" />
     <ClCompile Include="Flash.cpp" />
     <ClCompile Include="HDD.cpp" />
+    <ClCompile Include="List.cpp" />
     <ClCompile Include="Storage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Flash.h" />
     <ClInclude Include="HDD.h" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="Storage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

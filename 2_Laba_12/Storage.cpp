@@ -74,8 +74,13 @@ void Storage::inputInfo()
 
 void Storage::outputInfo()
 {
-    cout << "Manufacturer: " << manufacturer;
-    cout << "Storage size: " << storageSize;
-    cout << "Read speed: " << readSpeed;
-    cout << "Write speed: " << writeSpeed;
+    cout << "Manufacturer: " << manufacturer << endl;
+    cout << "Storage size: " << storageSize << endl;
+    cout << "Read speed: " << readSpeed << endl;
+    cout << "Write speed: " << writeSpeed << endl;
+}
+
+void Storage::ejectDevice()
+{
+    cout << "No info about device type";
 }

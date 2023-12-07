@@ -10,7 +10,7 @@ HDD::HDD(string manufacturer, int storageSize, int readSpeed, int writeSpeed, in
 	: Storage(manufacturer, storageSize, readSpeed, writeSpeed)
 {
 	this->rpm = rpm;
-	this->interface = interface; 
+	this->interface = interface;
 }
 
 HDD::~HDD()
@@ -49,4 +49,9 @@ void HDD::outputInfo() {
 	Storage::outputInfo();
 	cout << "RPM: " << rpm << endl;
 	cout << "Interface: " << interface << endl;
+}
+
+void HDD::ejectDevice()
+{
+	cout << " 1. Turn off your PC \n 2. Cut the power off \n 3. Disconect SATA and SATA Power cables \n 4. Remove HDD \n";
 }

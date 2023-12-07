@@ -27,7 +27,7 @@ public:
 	void setWritedSpeed(int writeSpeed);
 	int getWriteSpeed();
 
-	void inputInfo();
-	void outputInfo();
+	virtual void inputInfo();
+	virtual void outputInfo();
+	virtual void ejectDevice() = 0;
 };
-
